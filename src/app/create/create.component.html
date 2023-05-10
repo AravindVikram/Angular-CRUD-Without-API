@@ -1,0 +1,42 @@
+
+<br><h6 class="text-center">List of Items </h6>
+
+<div class="container" >
+    <div *ngIf="showAlert"  class="alert alert-danger">Please fill in all the fields</div>
+    
+        <form  (ngSubmit)="onSubmit()" >
+
+            <br><div class="form-group">
+                <label for="id">ID:</label>
+                 <input type="text" name="id"  class="form-control" [(ngModel)]="id" required>
+            </div>
+    
+           <br> <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" name="name"  class="form-control" [(ngModel)]="name" required>
+            </div>    
+    
+           <br> <div class="form-group">
+                 <label for="description">Description:</label>
+                <input type="text" name="description"  class="form-control" [(ngModel)]="description" required>
+            </div>
+            <br><div class="form-group">
+                <label for="price">Price:</label>
+                <input type="text" name="price"  class="form-control" [(ngModel)]="price" required>
+            </div>
+                
+           <br> <div class="form-group">
+                <label for="stock">Stock:</label>
+                <input type="number" name="stock" class="form-control" [(ngModel)]="stock" required>
+            </div>
+                
+          
+           <br> <button class="btn btn-primary" type="submit">Add Item</button>
+        </form>
+
+    
+</div>
+   
+
+
+  
